@@ -7,8 +7,7 @@ const rl = readline.createInterface({
 rl.question('please enter the amount : ',(amount)=> {
       
     money = Number(amount);
-    
-    
+      
 
 const i=0;
 const total = 0;

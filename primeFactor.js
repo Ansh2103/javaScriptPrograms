@@ -22,8 +22,6 @@ if (number > 1)
 else
     console.log();
 
-    number.close();
-
     rl.close();
 }
 
