@@ -1,44 +1,44 @@
 var readline = require('readline');
-var r1 = readline.createInterface({
+var rl = readline.createInterface({
  input: process.stdin,
  output:process.stdout
 });
 
-var response
-r1.question("Enter number of time to flip the coin ", function(answer)
+var number
+rl.question("Enter the number(times) to flip the coin  :  ", function(answer)
 {
-response = answer
-FlipCoin();
-r1.close();
+    number = answer
+coinFlip();
+rl.close();
 });
 
-FlipCoin = function()
+coinFlip = function()
 {
-    if(response>0)
+    if(number>0)
     {
-       var tails = 0;
+       var tail = 0;
        var head = 0;
-       for(var number = 0; number < response; number++)
+       for(var i = 0; i < number; i++)
        {
           var toss = Math.random()
           console.log(toss);
           if(toss<0.5)
           {
-             tails++;
+             tail++;
           }
           else
           {
               head++;
           }
        }
-       let tailPercentage = (tails/response)*100;
-       let headPercentage = (head/response)*100;
-       console.log('Number of time(s) you tossed the coin ' + response);
-       console.log('The Percentage of tails you tossed ' + tailPercentage + '%');
-       console.log('The percentage of Heads you tossed ' + headPercentage + '%');
+       let tailPercentage = (tail/number)*100;
+       let headPercentage = (head/number)*100;
+       console.log('Coin is tossed : ' + number);
+       console.log('Tail Percentage : ' + tailPercentage + '%');
+       console.log('Head Percentage :  ' + headPercentage + '%');
     }
     else
     {
-        console.log('Value cant be negative');
+        console.log('INVALID,TRY AGAIN');
     }
 }

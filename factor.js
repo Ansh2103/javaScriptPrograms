@@ -1,26 +1,26 @@
 var readline = require('readline');
-var r1 = readline.createInterface({
+var rl = readline.createInterface({
         input:process.stdin,
         output:process.stdout
-    }
+    }   
 );
-var response 
-r1.question("Enter the number to find prime factor:", function(answer){
- response = answer
- PrimeFactor();
- r1.close();
+var number
+rl.question("Please,Enter any number to find prime factor: ", function(answer){
+ number = answer
+ primeFactor();
+ rl.close();
 });
 
-PrimeFactor =  function()
+primeFactor =  function()
 {
-    if(response < 1){
-        console.log('Please enter valid number.');
+    if(number < 1){
+        console.log('The Number you entered is invalid');
     }
     else
     {   
-        for(var i= 1; i<= response/2;i++)
+        for(var i= 1; i<= number/2;i++)
         {
-            if(response%i === 0)
+            if(number%i === 0)
             {
                 var flag=0;
                 for(var j=2;j<i;j++)

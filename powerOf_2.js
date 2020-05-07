@@ -1,19 +1,28 @@
-var args = process.argv.slice(2);
-var k=2;
-console.log('Value passed was: '+ args)
-    if(args>0 && args<31){
-        console.log('Value of N \t\tPower of 2' + '\n');
-        for(var i=0;i<=args;i++)
+var readline = require('readline');
+var rl = readline.createInterface({
+        input:process.stdin,
+        output:process.stdout
+    }   
+);
+var number
+rl.question("Please,Enter any number to find power of 2: ", function(answer){
+ number = answer
+ powerOf2();
+ rl.close();
+});
+
+powerOf2 =  function()
+   {
+        for(var i=0;i<=number;i++)
         {
             console.log(i);
             for(var j=1;j<=i;j++)
             {
-                k=k*2;
+               var k=k*2;
             }
-            console.log('\t\t\t\t'+ k);
+            console.log('power of 2 : \t\t\t'+ k);
             k=1;
         }
     }
-    else{
-        console.log('Invalid Value passed.')
-    }
+    
+    
