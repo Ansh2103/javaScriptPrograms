@@ -1,5 +1,5 @@
 var fs = require('fs')
-var file = 'numbers.txt'
+var file = 'numFile.txt'
 
 function readFile(){
     return new Promise(function(resolve, reject){

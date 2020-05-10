@@ -1,4 +1,4 @@
-var file = 'fileOfNumber.txt'
+var file = require('fileOfNumber.txt')
 var insertion = require('./InsertionSort1')
 const fs = require('fs')
 
