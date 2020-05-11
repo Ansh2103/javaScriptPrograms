@@ -14,4 +14,4 @@ class Chain {
       return this;
     }
   }
-  const obj = new Chain().firstMethod().secondMethod().thirdMethod();       //Made chains of functions
+  const obj = new Chain().firstMethod().secondMethod().thirdMethod();       
